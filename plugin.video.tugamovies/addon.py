@@ -77,7 +77,7 @@ def menu():
 
 def login():
     if __ADDON__.getSetting("email") == '' or __ADDON__.getSetting('password') == '':
-        __ALERTA__('Servidor Filmes', 'Precisa de definir o seu email e password')
+        __ALERTA__('TVBOXALEX', 'Precisa de definir o seu email e password')
         return False
     else:
         try:
@@ -93,7 +93,7 @@ def login():
 
         except:
             resultado = False
-            __ALERTA__('TvBoxAlex', 'Não foi possível abrir a página. Por favor tente novamente')
+            __ALERTA__('TVBOXALEX', 'Não foi possível abrir a página. Por favor tente novamente')
             match = ''
             return resultado
 
@@ -102,16 +102,16 @@ def login():
 
             if match == []:
                 resultado = False
-                __ALERTA__('TvBoxAlex', 'Email e/ou Password incorretos')
+                __ALERTA__('TVBOXALEX', 'Email e/ou Password incorretos')
                 return resultado
             else:
                 resultado = True
-                xbmc.executebuiltin("XBMC.Notification(TvBoxAlex, Sessão iniciada: "+__ADDON__.getSetting("email") +", '10000', "+__ADDON_FOLDER__+"/icon.png)")
+                xbmc.executebuiltin("XBMC.Notification(MrPiracy.xyz, Sessão iniciada: "+__ADDON__.getSetting("email") +", '10000', "+__ADDON_FOLDER__+"/icon.png)")
                 return resultado
         else:
             net.save_cookies(__COOKIE_FILE__)
             resultado = True
-            xbmc.executebuiltin("XBMC.Notification(TvBoxAlex, Sessão iniciada: "+__ADDON__.getSetting("email") +", '10000', "+__ADDON_FOLDER__+"/icon.png)")
+            xbmc.executebuiltin("XBMC.Notification(MrPiracy.xyz, Sessão iniciada: "+__ADDON__.getSetting("email") +", '10000', "+__ADDON_FOLDER__+"/icon.png)")
             return resultado
 
 def getList(url, pagina):
@@ -143,8 +143,10 @@ def getList(url, pagina):
         #match = re.compile('<img src="(.+?)" alt="(.+?)">\s+<div class="thumb-effect" title="(.+?)"><\/div>\s+<\/a>\s+<\/div>\s+<\/div>\s+<div class="movie-info">\s+<a href="(.+?)" class="movie-name">(.+?)<\/a>\s+<div class="clear"><\/div>\s+<div class="movie-detailed-info">\s+<div class="detailed-aux" style="height\: 20px\; line-height\: 20px\;">\s+<span class="genre">(.+?)<\/span>\s+<span class="year">\s+<span>\(<\/span>(.+?)<span>\)<\/span><\/span>\s+<span class="original-name">\s+-\s+"(.+?)"<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Realizador:\s+<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Elenco:<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<\/div>\s+').findall(codigo_fonte)
         #match += re.compile('<img src="(.+?)" alt="(.+?)">\s+<div class="thumb-effect" title="(.+?)"><\/div>\s+<div class="portugues"><\/div>\s+<\/a>\s+<\/div>\s+<\/div>\s+<div class="movie-info">\s+<a href="(.+?)" class="movie-name">(.+?)<\/a>\s+<div class="clear"><\/div>\s+<div class="movie-detailed-info">\s+<div class="detailed-aux" style="height\: 20px\; line-height\: 20px\;">\s+<span class="genre">(.+?)<\/span>\s+<span class="year">\s+<span>\(<\/span>(.+?)<span>\)<\/span><\/span>\s+<span class="original-name">\s+-\s+"(.+?)"<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Realizador:\s+<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Elenco:<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<\/div>\s+').findall(codigo_fonte)
 
-        match = re.compile('<img src="(.+?)" alt="(.+?)">\s+<div class="thumb-effect" title="(.+?)"><\/div>\s+<\/a>\s+<\/div>\s+<\/div>\s+<div class="movie-info">\s+<a href="(.+?)" class="movie-name">(.+?)<\/a>\s+<div class="clear"><\/div>\s+<div class="movie-detailed-info">\s+<div class="detailed-aux" style="height\: inherit\;line-height\: 20px\;">\s+<span class="genre">(.+?)<\/span>\s+<span class="year">\s+<span>\(<\/span>(.+?)<span>\)<\/span><\/span>\s+<span class="original-name">\s+-\s+"(.+?)"<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Realizador:\s+<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Elenco:<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<\/div>\s+<div class="clear"><\/div>\s+<br><div class="clear"><\/div>\s+<span id="movie-synopsis" class="movie-synopsis">(.+)<\/span>').findall(codigo_fonte)
-        match += re.compile('<img src="(.+?)" alt="(.+?)">\s+<div class="thumb-effect" title="(.+?)"><\/div>\s+<div class="portugues"><\/div>\s+<\/a>\s+<\/div>\s+<\/div>\s+<div class="movie-info">\s+<a href="(.+?)" class="movie-name">(.+?)<\/a>\s+<div class="clear"><\/div>\s+<div class="movie-detailed-info">\s+<div class="detailed-aux" style="height\: inherit\;line-height\: 20px\;">\s+<span class="genre">(.+?)<\/span>\s+<span class="year">\s+<span>\(<\/span>(.+?)<span>\)<\/span><\/span>\s+<span class="original-name">\s+-\s+"(.+?)"<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Realizador:\s+<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Elenco:<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<\/div>\s+<div class="clear"><\/div>\s+<br><div class="clear"><\/div>\s+<span id="movie-synopsis" class="movie-synopsis">(.+)<\/span>').findall(codigo_fonte)
+        #match = re.compile('<img src="(.+?)" alt="(.+?)">\s+<div class="thumb-effect" title="(.+?)"><\/div>\s+<\/a>\s+<\/div>\s+<\/div>\s+<div class="movie-info">\s+<a href="(.+?)" class="movie-name">(.+?)<\/a>\s+<div class="clear"><\/div>\s+<div class="movie-detailed-info">\s+<div class="detailed-aux" style="height\: inherit\;line-height\: 20px\;">\s+<span class="genre">(.+?)<\/span>\s+<span class="year">\s+<span>\(<\/span>(.+?)<span>\)<\/span><\/span>\s+<span class="original-name">\s+-\s+"(.+?)"<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Realizador:\s+<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Elenco:<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<\/div>\s+<div class="clear"><\/div>\s+<br><div class="clear"><\/div>\s+<span id="movie-synopsis" class="movie-synopsis">(.+)<\/span>').findall(codigo_fonte)
+        match = re.compile('<img src="(.+?)" alt="(.+?)">\s+<\/a>\s+<\/div>\s+<\/div>\s+<div class="movie-info">\s+<a href="(.+?)" class="movie-name">(.+?)<\/a>\s+<div class="clear"><\/div>\s+<div class="movie-detailed-info">\s+<div class="detailed-aux" style="height\: inherit\;line-height\: 20px\;">\s+<span class="genre">(.+?)<\/span>\s+<span class="year">\s+<span>\(<\/span>(.+?)<span>\)<\/span><\/span>\s+<span class="original-name">\s+-\s+"(.+?)"<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Realizador:\s+<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Elenco:<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<\/div>\s+<div class="clear"><\/div>\s+<br><div class="clear"><\/div>\s+<span id="movie-synopsis" class="movie-synopsis">(.+)<\/span>').findall(codigo_fonte)
+        #match += re.compile('<img src="(.+?)" alt="(.+?)">\s+<div class="thumb-effect" title="(.+?)"><\/div>\s+<div class="portugues"><\/div>\s+<\/a>\s+<\/div>\s+<\/div>\s+<div class="movie-info">\s+<a href="(.+?)" class="movie-name">(.+?)<\/a>\s+<div class="clear"><\/div>\s+<div class="movie-detailed-info">\s+<div class="detailed-aux" style="height\: inherit\;line-height\: 20px\;">\s+<span class="genre">(.+?)<\/span>\s+<span class="year">\s+<span>\(<\/span>(.+?)<span>\)<\/span><\/span>\s+<span class="original-name">\s+-\s+"(.+?)"<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Realizador:\s+<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Elenco:<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<\/div>\s+<div class="clear"><\/div>\s+<br><div class="clear"><\/div>\s+<span id="movie-synopsis" class="movie-synopsis">(.+)<\/span>').findall(codigo_fonte)
+        match += re.compile('<img src="(.+?)" alt="(.+?)">\s+<div class="portugues"><\/div>\s+<\/a>\s+<\/div>\s+<\/div>\s+<div class="movie-info">\s+<a href="(.+?)" class="movie-name">(.+?)<\/a>\s+<div class="clear"><\/div>\s+<div class="movie-detailed-info">\s+<div class="detailed-aux" style="height\: inherit\;line-height\: 20px\;">\s+<span class="genre">(.+?)<\/span>\s+<span class="year">\s+<span>\(<\/span>(.+?)<span>\)<\/span><\/span>\s+<span class="original-name">\s+-\s+"(.+?)"<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Realizador:\s+<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Elenco:<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<\/div>\s+<div class="clear"><\/div>\s+<br><div class="clear"><\/div>\s+<span id="movie-synopsis" class="movie-synopsis">(.+)<\/span>').findall(codigo_fonte)
 
     elif tipo == 'series':
         #series pt
@@ -162,17 +164,21 @@ def getList(url, pagina):
         match = re.compile('<img src="(.+?)" alt="(.+?)">\s+<div class="thumb-effect" title="(.+?)"><\/div>\s+\s+<\/a>\s+<\/div>\s+<\/div>\s+<div class="movie-info">\s+<a href="(.+?)" class="movie-name">(.+?)<\/a>\s+<div class="clear"><\/div>\s+<div class="movie-detailed-info">\s+<div class="detailed-aux" style="height\: 20px\; line-height\: 20px\;">\s+<span class="genre">(.+?)<\/span>\s+<span class="year">\s+<span>\(<\/span>(.+?)<span>\)<\/span><\/span>\s+<span class="original-name">\s+-\s+"(.+?)"<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Criador:\s+<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Elenco:<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<\/div>\s+<div class="clear"><\/div>\s+<br><div class="clear"><\/div>\s+<span id="movie-synopsis" class="movie-synopsis">(.+?)<\/span>').findall(codigo_fonte)
         match += re.compile('<img src="(.+?)" alt="(.+?)">\s+<div class="thumb-effect" title="(.+?)"><\/div>\s+<div class="portugues"><\/div>\s+<\/a>\s+<\/div>\s+<\/div>\s+<div class="movie-info">\s+<a href="(.+?)" class="movie-name">(.+?)<\/a>\s+<div class="clear"><\/div>\s+<div class="movie-detailed-info">\s+<div class="detailed-aux" style="height\: 20px\; line-height\: 20px\;">\s+<span class="genre">(.+?)<\/span>\s+<span class="year">\s+<span>\(<\/span>(.+?)<span>\)<\/span><\/span>\s+<span class="original-name">\s+-\s+"(.+?)"<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Criador:\s+<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<div class="detailed-aux">\s+<span class="director-caption">Elenco:<\/span>\s+<span class="director">(.+?)<\/span>\s+<\/div>\s+<\/div>\s+<div class="clear"><\/div>\s+<br><div class="clear"><\/div>\s+<span id="movie-synopsis" class="movie-synopsis">(.+\s+.+)<\/span>').findall(codigo_fonte)
 
-    #pprint.pprint(match)
+    pprint.pprint(match)
 
-    for imagem, nome1, nome2, link, nome3, genero, ano, nomeOriginal, realizador, elenco, plot in match:
-        if tipo == 'filmes':
+    
+    if tipo == 'filmes':
+
+        for imagem, nome1, link, nome3, genero, ano, nomeOriginal, realizador, elenco, plot in match:
             try:
+                
                 infoLabels = {'Title': nomeOriginal.encode('utf8'), 'Year': ano, 'Genre': genero.encode('utf8'), 'Plot': plot }
 
                 addVideo(nomeOriginal+' ('+ano+')', __SITE__+link, 3, imagem, 'filme', 0, 0, infoLabels, imagem)
             except:
                 pass
-        else:
+    else:
+        for imagem, nome1, nome2, link, nome3, genero, ano, nomeOriginal, realizador, elenco, plot in match:
             try:
                 infoLabels = {'Title':nomeOriginal.encode('utf8'), 'Aired':ano, 'Plot': plot}
                 addDir(nomeOriginal+ ' ('+ano+')', __SITE__+link, 4, imagem, pagina, 'serie', infoLabels, imagem)
@@ -416,8 +422,9 @@ def getGeneros(url):
 
     #match = re.compile('<div id="item1" class="item">\s+<label for="genre1" id="genre1Label"><a style="font-family: Tahoma; color: #8D8D8D;font-size: 11px;padding-left: 5px;float: left;width: 142px;font-weight: normal;text-decoration: initial;" href="(.+?)">(.+?)<\/a><\/label>\s+<\/div>').findall(codigo_fonte)
     match = re.compile('<label for="genre1" id="genre1Label"><a style="font-family: Tahoma; color: #8D8D8D;font-size: 11px;padding-left: 5px;float: left;width: 142px;font-weight: normal;text-decoration: initial;" href="(.+?)">(.+?)<\/a><\/label>').findall(codigo_fonte)
+    match += re.compile('<label for="genre1" id="genre1Label"><a style="font-family: Tahoma; color: #8D8D8D;font-size: 11px;padding-left: 5px;float: left;width: 142px;text-decoration: initial;" href="(.+?)">(.+?)<\/a><\/label>').findall(codigo_fonte)
 
-    print match 
+    
 
     for link, nome in match:
         if 'filmes.php' in url:
@@ -457,7 +464,7 @@ def getListOfMyAccount(url, pagina):
             infoLabels = {'Title': nome.encode('utf8')}
             addDir(nome.encode('utf8'), __SITE__+link, 4, imagem, pagina, 'serie', infoLabels, imagem)
             
-    addDir('Proximo', __SITE__+tipo+'.php?pagina='+str(int(pagina)+1), 1, os.path.join(__ART_FOLDER__, __SKIN__, 'proximo.png'), int(pagina)+1)
+    addDir('Proximo', __SITE__+tipo+'.php?pagina='+str(int(pagina)+1), 11, os.path.join(__ART_FOLDER__, __SKIN__, 'proximo.png'), int(pagina)+1)
 
     vista_filmesSeries()
 
@@ -474,8 +481,8 @@ def abrirDefinincoes():
 
 def vista_menu():
     opcao = __ADDON__.getSetting('menuView')
-    if opcao == '0': xbmc.executebuiltin("Container.SetViewMode(500)")
-    elif opcao == '1': xbmc.executebuiltin("Container.SetViewMode(501")
+    if opcao == '0': xbmc.executebuiltin("Container.SetViewMode(50)")
+    elif opcao == '1': xbmc.executebuiltin("Container.SetViewMode(51")
 
 def vista_filmesSeries():
     opcao = __ADDON__.getSetting('filmesSeriesView')
@@ -620,9 +627,9 @@ def player(name,url,iconimage,temporada,episodio,serieNome=''):
         siteBase = 'serie.php'
 
     mensagemprogresso = xbmcgui.DialogProgress()
-    mensagemprogresso.create('TvBoxAlex', u'Abrir emissão','Por favor aguarde...')
+    mensagemprogresso.create('TVBOXALEX', u'Abrir emissão','Por favor aguarde...')
 
-    mensagemprogresso.update(25, "TvBoxAlex", u'Obter video e legenda', "")
+    mensagemprogresso.update(25, "", u'Obter video e legenda', "")
 
     net = Net()
     net.set_cookies(__COOKIE_FILE__)
@@ -636,7 +643,7 @@ def player(name,url,iconimage,temporada,episodio,serieNome=''):
     print stream
     print legenda
 
-    mensagemprogresso.update(50, "TvBoxAlex", u'Prepara-te, vai começar!', "")
+    mensagemprogresso.update(50, "", u'Prepara-te, vai começar!', "")
     
     playlist = xbmc.PlayList(1)
     playlist.clear()
@@ -649,7 +656,7 @@ def player(name,url,iconimage,temporada,episodio,serieNome=''):
     
     xbmcplugin.setResolvedUrl(handle=int(sys.argv[1]), succeeded=True, listitem=listitem)
     
-    mensagemprogresso.update(75, "TvBoxAlex", u'Boa Sessão!!!', "")
+    mensagemprogresso.update(75, "", u'Boa Sessão!!!', "")
     print "url: "+url+" idIMDb: "+idIMDb+" pastaData: "+pastaData+"\n temporada: "+str(temporada)+" episodio: "+str(episodio)+" \nnome: "+name+" ano:"+str(ano)+"\nstram: "+stream+" legenda: "+legenda 
 
     player = Player.Player(url=url, idFilme=idIMDb, pastaData=pastaData, temporada=temporada, episodio=episodio, nome=name, ano=ano, logo=os.path.join(__ADDON_FOLDER__,'icon.png'), serieNome=serieNome)
