@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="plugin.video.arquivobrasil" name="Arquivo Brasil" version="1.3.2" provider-name="AddonBrasil">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.urlresolver" optional="true"/>
+  </requires>
+
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <language>en</language>
+    <platform>all</platform>
+    <summary lang="en">Arquivo Brasil</summary>
+    <description lang="en">O Arquivo Brasil e um agregador de episodios de novelas, series, programas de variedades, programas jornalísticos e esportivos brasileiros.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.novelas" name="TVBOXALEXNOVELAS" version="10.0.0" provider-name="TVBOXALEX">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.urlresolver" optional="true"/>
+  </requires>
+
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <language>en</language>
+    <platform>all</platform>
+    <summary lang="en">TVBOXALEX</summary>
+    <description lang="en">A TVBOXALEX NOVELAS e um agregador de episodios de novelas, series, programas de variedades, programas jornalísticos e esportivos brasileiros.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.tugamovies" name="[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][COLOR white] FILMES[/COLOR]" version="1.0.11" provider-name="Alex">
+ <requires>
+  <import addon="xbmc.python" version="2.14.0"/>
+  <import addon="script.module.beautifulsoup4" version="4.3.2"/>
+  <import addon="script.module.t0mm0.common" version="1.0.0"/>
+  </requires>
+ <extension library="addon.py" point="xbmc.python.pluginsource">
+  <provides>video</provides>
+ </extension>
+ <extension point="xbmc.addon.metadata">
+    <summary lang="en">TVBOXALEX</summary>
+    <description lang="en">Addon TVBOXALEX</description>
+    <description lang="en">Filmes e series no Kodi. </description>
+    <disclaimer lang="en">Como desenvolvedor do addon, nada tenho a haver com site. Limito-me a ler o seu conteúdo disponibilizado e converter em addon.</disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license></license>
+    <forum></forum>
+    <website></website>
+    <email></email>
+    <source></source>
+ </extension>
+</addon>
+
+<addon id="plugin.video.tugamovies" name="[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][COLOR white] FILMES[/COLOR]" version="1.0.8" provider-name="Alex">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.requests"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <language>en</language>
+    <platform>all</platform>
+    <summary lang="en">Tv Box Alex - Filmes</summary>
+    <description lang="en">Addon exclusivo para os clientes TvBoxAlex.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.tvalex" name="[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][COLOR white]MASTER[/COLOR]" version="0.3.2" provider-name="[B][COLOR blue]ALEX[/COLOR][/B]">
+	<requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.beautifulsoup" version="3.2.1"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <language>Pt</language>
+    <platform>all</platform>
+    <summary lang="en">assista tv ao vivo com a TV_BOX_ALEX</summary>
+    <description lang="en">O autor deste addon nao e responsavel pelo conteudo dos streams. Addon exclusivo para os clientes TvBoxAlex.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.uktv" name="[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][COLOR white]UKFREEVIEW[/COLOR]" version="1.0.0" provider-name="Alex">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>UK STREAM TELEVISIO FREEVIEW</summary>
+    <description>Addon exclusivo para os clientes TvBoxAlex.</description>
+  </extension>
+</addon>
+
+<addon id="tvalex.repo" name="[B][COLOR green]TV BOX [/COLOR][/B][B][COLOR yellow]ALEX [/COLOR][/B][B][COLOR red]REPOSITORIO[/COLOR][/B]" version="[B][COLOR red]0.0.6[/COLOR][/B]" provider-name="[B][COLOR blue]Alex[/COLOR][/B]">
+	<extension point="xbmc.addon.repository" name="Repositorio.TvBoxAlex">
+		<info compressed="false">http://raw.github.com/alexandrems1000/TVBOXALEX/master/addons.xml</info>
+		<checksum>http://raw.github.com/alexandrems1000/TVBOXALEX/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://raw.github.com/alexandrems1000/TVBOXALEX/master/repo/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Tv Box Alex_Addon</summary>
+		<description>Este Repositorio e de autoria de Alex.</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+</addons>

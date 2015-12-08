@@ -1,0 +1,12 @@
+v1.0.9 (30/11/2015)
+- Alterações do site corrigidas no addon!
+
+
+v0.0.1
+- Sistema Login
+- Ver filmes
+- Ver series
+- Pesquisa
+- Filmes/Series por categorias
+- Filmes/Series por ano
+

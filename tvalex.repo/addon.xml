@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="tvalex.repo" name="[B][COLOR green]TV BOX [/COLOR][/B][B][COLOR yellow]ALEX [/COLOR][/B][B][COLOR red]REPOSITORIO[/COLOR][/B]" version="[B][COLOR red]0.0.6[/COLOR][/B]" provider-name="[B][COLOR blue]Alex[/COLOR][/B]">
+	<extension point="xbmc.addon.repository" name="Repositorio.TvBoxAlex">
+		<info compressed="false">http://raw.github.com/alexandrems1000/TVBOXALEX/master/addons.xml</info>
+		<checksum>http://raw.github.com/alexandrems1000/TVBOXALEX/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://raw.github.com/alexandrems1000/TVBOXALEX/master/repo/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Tv Box Alex_Addon</summary>
+		<description>Este Repositorio e de autoria de Alex.</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>

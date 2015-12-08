@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+
+   <category label="Definições gerais">
+		<setting id="home-view"	type="enum" label="Main Menu View" values="List|Thumbnail" default="1" enable="!eq(-1,false)"/>
+		<setting id="sub-view"	type="enum" label="Sub Menu View" values="List|Thumbnail" default="1" enable="!eq(-1,false)"/>
+		<setting id="homeitems" type="bool" label="[B]By Year[/B]" default="true"/>
+		<setting id="sort_by" type="labelenum" label="Sort By" values="Date Added|Release Date|Alphabetical|Ratings" default="Date Added"/>
+	</category>
+	
+	 <category label="Definições Video">
+		<setting id="subs" type="bool" label="Embutir legendas" default="true"/>
+		<setting id="fanart" type="bool" label="Apresentar fanart" default="true"/>
+		<setting id="quality" type="enum" label="Qualidade" values="320kbps|450kbps|600kbps|950kbps|1500kbps" default="4" />
+    </category>
+	
+	 <category label="Definicoes Conta">
+      <setting label="[B][COLOR green]Dados de conta:[/B][/COLOR]" type="lsep" />
+	  <setting id="login_name" type="text" label="Username" default="TvBoxAlex"/>
+      <setting id="login_password" type="text" label="Password" default="0000" option="hidden" enable="!eq(-1,false)"/>
+	</category>
+	
+	<category label="Kids-Mode">
+		<setting id="kid-mode" type="bool" label="Enable Kid Mode" default="false"/>
+		<setting id="parent-password" type="text" label="Parent Password" default="" option="hidden" enable="!eq(-2,false)"/>
+	</category>   
+   
+    <category label="Download">
+		<setting id="download-folder" type="folder" label="Pasta de Download" default=""/>
+   </category>
+   
+</settings>
