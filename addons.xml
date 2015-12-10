@@ -19,6 +19,31 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.cook"
+       name="Cooking Channel"
+       version="1.0.3"
+       provider-name="t1m">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Cooking Channel</summary>
+    <description lang="en">Cooking Channel</description>
+    <disclaimer lang="en">Feel free to use this script. For information visit the wiki.</disclaimer>
+    <platform>all</platform>
+    <language>en</language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum>http://forum.kodi.tv/showthread.php?tid=224107</forum>
+    <website>http://www.cookingchanneltv.com/</website>
+    <email></email>
+    <source>https://github.com/learningit/plugin.video.cook/</source>
+  </extension>
+</addon>
+
 <addon id="plugin.video.novelas" name="TVBOXALEXNOVELAS" version="10.0.0" provider-name="TVBOXALEX">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -108,6 +133,27 @@
     <platform>all</platform>
     <summary>UK STREAM TELEVISIO FREEVIEW</summary>
     <description>Addon exclusivo para os clientes TvBoxAlex.</description>
+  </extension>
+</addon>
+
+<addon id="plugin.video.yt-cook"
+	name="Cooking on YouTube Volume 1"
+	version="1.0.0"
+	provider-name="coldkeys">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.addon.common" version="2.0.0"/>
+    <import addon="plugin.video.youtube" version="5.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Cooking Videos on YouTube Volume 1</summary>
+    <description lang="en">Thousands of recipes and cooking how-to videos on YouTube Volume 1. 50 channels/playlists including Jamie Oliver, America's Test Kitchen, One Pot Chef Show, Food Wishes, Siu's Cooking (Chinese), Maangchi (Korean Cuisine), India Food Network, Gordon Ramsay and BBQ Pit Boys.</description>
+    <platform>all</platform>
+    <forum>n/a</forum>
+    <website>n/a</website>
   </extension>
 </addon>
 

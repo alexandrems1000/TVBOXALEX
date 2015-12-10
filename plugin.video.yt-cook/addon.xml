@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.yt-cook"
+	name="Cooking on YouTube Volume 1"
+	version="1.0.0"
+	provider-name="coldkeys">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.addon.common" version="2.0.0"/>
+    <import addon="plugin.video.youtube" version="5.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Cooking Videos on YouTube Volume 1</summary>
+    <description lang="en">Thousands of recipes and cooking how-to videos on YouTube Volume 1. 50 channels/playlists including Jamie Oliver, America's Test Kitchen, One Pot Chef Show, Food Wishes, Siu's Cooking (Chinese), Maangchi (Korean Cuisine), India Food Network, Gordon Ramsay and BBQ Pit Boys.</description>
+    <platform>all</platform>
+    <forum>n/a</forum>
+    <website>n/a</website>
+  </extension>
+</addon>
