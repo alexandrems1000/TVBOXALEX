@@ -47,12 +47,12 @@ __HEADERS__ = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:4
 
 
 def menu():
-#    check_login = login()
- #   if check_login:
+
+    check_login = login()
+    if check_login:
         addDir('Filmes', __SITE__+'filmes.php', 1, os.path.join(__ART_FOLDER__, __SKIN__, 'filmes.png'), 1)
         addDir('Series', __SITE__+'series.php', 1, os.path.join(__ART_FOLDER__, __SKIN__, 'series.png'), 1)
         addDir('Pesquisa', __SITE__, 6, os.path.join(__ART_FOLDER__, __SKIN__, 'pesquisa.png'), 1)
-#        addDir('', '', '', os.path.join(__ART_FOLDER__,'nada.png'), 0)
         addDir('Filmes por Ano', __SITE__+'filmes.php', 9, os.path.join(__ART_FOLDER__, __SKIN__, 'ano.png'), 1)
         addDir('Filmes por Genero', __SITE__+'filmes.php', 8, os.path.join(__ART_FOLDER__, __SKIN__, 'generos.png'), 1)
         addDir('Series por Ano', __SITE__+'series.php', 9, os.path.join(__ART_FOLDER__, __SKIN__, 'ano.png'), 1)
@@ -60,24 +60,24 @@ def menu():
 #        addDir('A Minha Conta', 'url', 10, os.path.join(__ART_FOLDER__, __SKIN__, 'definicoes.png'), 0)
 #        addDir('Definições', 'url', 1000, os.path.join(__ART_FOLDER__, __SKIN__, 'definicoes.png'), 0)
 
-#  "      vista_menu()
-#    else:
-#        addDir('Alterar Definições', 'url', 1000, os.path.join(__ART_FOLDER__, __SKIN__, 'definicoes.png'), 0)
-#        addDir('Entrar novamente', 'url', None, os.path.join(__ART_FOLDER__, __SKIN__, 'retroceder.png'), 0)
+        vista_menu()
+    else:
+        addDir('Alterar Definições', 'url', 1000, os.path.join(__ART_FOLDER__, __SKIN__, 'definicoes.png'), 0)
+        addDir('Entrar novamente', 'url', None, os.path.join(__ART_FOLDER__, __SKIN__, 'retroceder.png'), 0)
         vista_menu()
 
-#def minhaConta():
- #   addDir('Favoritos', __SITE__+'favoritos.php', 11, os.path.join(__ART_FOLDER__, __SKIN__, 'favoritos.png'), 1)
-  #  addDir('Agendados', __SITE__+'vermaistarde.php', 11, os.path.join(__ART_FOLDER__, __SKIN__, 'agendados.png'), 1)
-   # addDir('Últimos Filmes Vistos', __SITE__+'vistos.php', 11, os.path.join(__ART_FOLDER__, __SKIN__, 'ultimos.png'), 1)
+def minhaConta():
+    addDir('Favoritos', __SITE__+'favoritos.php', 11, os.path.join(__ART_FOLDER__, __SKIN__, 'favoritos.png'), 1)
+    addDir('Agendados', __SITE__+'vermaistarde.php', 11, os.path.join(__ART_FOLDER__, __SKIN__, 'agendados.png'), 1)
+    addDir('Últimos Filmes Vistos', __SITE__+'vistos.php', 11, os.path.join(__ART_FOLDER__, __SKIN__, 'ultimos.png'), 1)
 
-    #vista_menu()
+    vista_menu()
 
 
 
 def login():
     if __ADDON__.getSetting("email") == '' or __ADDON__.getSetting('password') == '':
-        __ALERTA__('TVBOXALEX', 'Precisa de definir o seu email e password')
+        __ALERTA__('TVBOXALEX', '                             MENSAGEM IMPORTANTE:                             PARA ENTRAR NESTE ADDON PEDIR A SUA PASSWORD PARTICULAR NO Nº07501657093, NA SUA MENSAGEM IDENTIFIQUE O SEU NOME CLIENTE.  OBRIGADO')
         return False
     else:
         try:
@@ -106,12 +106,12 @@ def login():
                 return resultado
             else:
                 resultado = True
-                xbmc.executebuiltin("XBMC.Notification(MrPiracy.xyz, Sessão iniciada: "+__ADDON__.getSetting("email") +", '10000', "+__ADDON_FOLDER__+"/icon.png)")
+                xbmc.executebuiltin("XBMC.Notification(TVBOXALEX, Sessão iniciada: "+", '10000', "+__ADDON_FOLDER__+"/icon.png)")
                 return resultado
         else:
             net.save_cookies(__COOKIE_FILE__)
             resultado = True
-            xbmc.executebuiltin("XBMC.Notification(MrPiracy.xyz, Sessão iniciada: "+__ADDON__.getSetting("email") +", '10000', "+__ADDON_FOLDER__+"/icon.png)")
+            xbmc.executebuiltin("XBMC.Notification(TVBOXALEX, Sessão iniciada: "+", '10000', "+__ADDON_FOLDER__+"/icon.png)")
             return resultado
 
 def getList(url, pagina):
@@ -481,12 +481,12 @@ def abrirDefinincoes():
 
 def vista_menu():
     opcao = __ADDON__.getSetting('menuView')
-    if opcao == '0': xbmc.executebuiltin("Container.SetViewMode(50)")
+    if opcao == '0': xbmc.executebuiltin("Container.SetViewMode(500)")
     elif opcao == '1': xbmc.executebuiltin("Container.SetViewMode(51")
 
 def vista_filmesSeries():
     opcao = __ADDON__.getSetting('filmesSeriesView')
-    if opcao == '0': xbmc.executebuiltin("Container.SetViewMode(50)")
+    if opcao == '0': xbmc.executebuiltin("Container.SetViewMode(503)")
     elif opcao == '1': xbmc.executebuiltin("Container.SetViewMode(51)")
     elif opcao == '2': xbmc.executebuiltin("Container.SetViewMode(500)")
     elif opcao == '3': xbmc.executebuiltin("Container.SetViewMode(501)")
@@ -498,13 +498,13 @@ def vista_filmesSeries():
 
 def vista_temporadas():
     opcao = __ADDON__.getSetting('temporadasView')
-    if opcao == '0': xbmc.executebuiltin("Container.SetViewMode(50)")
+    if opcao == '0': xbmc.executebuiltin("Container.SetViewMode(503)")
     elif opcao == '1': xbmc.executebuiltin("Container.SetViewMode(51)")
     elif opcao == '2': xbmc.executebuiltin("Container.SetViewMode(500)")
 
 def vista_episodios():
     opcao = __ADDON__.getSetting('episodiosView')
-    if opcao == '0': xbmc.executebuiltin("Container.SetViewMode(50)")
+    if opcao == '0': xbmc.executebuiltin("Container.SetViewMode(503)")
     elif opcao == '1': xbmc.executebuiltin("Container.SetViewMode(51)")
     elif opcao == '2': xbmc.executebuiltin("Container.SetViewMode(500)")    
 
@@ -629,7 +629,7 @@ def player(name,url,iconimage,temporada,episodio,serieNome=''):
     mensagemprogresso = xbmcgui.DialogProgress()
     mensagemprogresso.create('TVBOXALEX', u'Abrir emissão','Por favor aguarde...')
 
-    mensagemprogresso.update(25, "", u'Obter video e legenda', "")
+    mensagemprogresso.update(25, "TVBOXALEX", u'Obter video e legenda', "")
 
     net = Net()
     net.set_cookies(__COOKIE_FILE__)
@@ -643,7 +643,7 @@ def player(name,url,iconimage,temporada,episodio,serieNome=''):
     print stream
     print legenda
 
-    mensagemprogresso.update(50, "", u'Prepara-te, vai começar!', "")
+    mensagemprogresso.update(50, "TVBOXALEX", u'Prepara-te, vai começar!', "")
     
     playlist = xbmc.PlayList(1)
     playlist.clear()
@@ -656,7 +656,7 @@ def player(name,url,iconimage,temporada,episodio,serieNome=''):
     
     xbmcplugin.setResolvedUrl(handle=int(sys.argv[1]), succeeded=True, listitem=listitem)
     
-    mensagemprogresso.update(75, "", u'Boa Sessão!!!', "")
+    mensagemprogresso.update(75, "TVBOXALEX", u'Boa Sessão!!!', "")
     print "url: "+url+" idIMDb: "+idIMDb+" pastaData: "+pastaData+"\n temporada: "+str(temporada)+" episodio: "+str(episodio)+" \nnome: "+name+" ano:"+str(ano)+"\nstram: "+stream+" legenda: "+legenda 
 
     player = Player.Player(url=url, idFilme=idIMDb, pastaData=pastaData, temporada=temporada, episodio=episodio, nome=name, ano=ano, logo=os.path.join(__ADDON_FOLDER__,'icon.png'), serieNome=serieNome)
