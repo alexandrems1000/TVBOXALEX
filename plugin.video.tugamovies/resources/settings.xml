@@ -3,7 +3,7 @@
     <category label="Definições Gerais">
         <setting label="Conta Filmes:" type="lsep" />
         <setting id="email" type="text" label="Conta" default="tvboxalex@hotmail.com" option="hidden"/>
-        <setting id="password" type="text" label="Password" default="25b18g7kfal2015" option="hidden" enable="!eq(-1,false)"/>
+        <setting id="password" type="text" label="Password" default="" option="hidden" enable="!eq(-1,false)"/>
         <setting type="sep" />  
     </category>
     <category label="Download">
