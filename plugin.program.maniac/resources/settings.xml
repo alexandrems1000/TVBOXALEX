@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="Auto-View">
+		<setting id="auto-view" type="bool" label="Enable Auto View" default="true"/>
+		<setting id="MAIN" type="number" label="MAIN" default="500" enable="!eq(-1,false)"/>
+		<setting id="INFO" type="number" label="INFO" default="515" enable="!eq(-1,false)"/>
+   	</category>
+	<category label="Premium Login">
+		<setting id="User" type="text" label="[COLOR blue][B]AMO[/B][/COLOR][COLOR green]box[/COLOR] [COLOR gold]Username[/COLOR]" default="AMObox" visible="true"/>
+    </category>
+	<category label="Backup Folder">
+		<setting id="mastercopy" type="bool" label="Create full backup AS WELL as universal" default="false"/>
+		<setting type="lsep" label="Builds can be quite large, enabling these options could quickly fill up your storage."/>
+		<setting type="lsep" label="[CR][CR][CR]"/>
+        <setting id="zip" type="folder"    label="Choose Backup Storage Location"      default=""/>
+ 		<setting id="dummy" label="[COLOR=lime]Click here to see if [COLOR=blue][B]AMO[/B][/COLOR][COLOR=green]box[/COLOR] CB Tool can write to this path[/COLOR]" type="action" action="RunScript($CWD/CheckPath.py)"/>
+		<setting type="lsep" label="[COLOR=red]DO NOT[/COLOR] use a location inside your XBMC/Kodi setup."/>
+		<setting type="lsep" label="[CR]Also make sure you choose a location that XBMC/Kodi can write to."/>
+		<setting type="lsep" label="It is not possible to write to a network location."/>
+	</category>   	
+</settings>
