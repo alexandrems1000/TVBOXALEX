@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="plugin.program.tvboxalex" name="[B][COLOR green]TV BOX [/COLOR][/B][B][COLOR yellow]ALEX [/COLOR][/B]PROGRAM[/COLOR][/B]" version="[B][COLOR red]0.0.1[/COLOR][/B]" provider-name="[B][COLOR blue]Alex[/COLOR][/B]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.addon.common" />
+	</requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Tv Box Alex_Program</summary>
+    <description lang="en">[B][COLOR green]TV BOX [/COLOR][/B][B][COLOR yellow]ALEX [/COLOR][/B] Wizard provides easy access to [COLOR red][B]TVBOX[/B] ALEX[/COLOR] Builds.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.arquivobrasil" name="Arquivo Brasil" version="1.3.2" provider-name="AddonBrasil">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -155,6 +170,20 @@
     <forum>n/a</forum>
     <website>n/a</website>
   </extension>
+</addon>
+
+<addon id="repository.tvboxalex_build" name="[B][COLOR green]TV BOX [/COLOR][/B][B][COLOR yellow]ALEX_BUILD [/COLOR][/B][B][COLOR red]REPOSITORIO[/COLOR][/B]" version="[B][COLOR red]0.0.1[/COLOR][/B]" provider-name="[B][COLOR blue]Alex[/COLOR][/B]">
+	<extension point="xbmc.addon.repository" name="Add-on Repository">
+		<info compressed="false">http://raw.github.com/alexandrems1000/TVBOXALEX/master/addons.xml</info>
+		<checksum>http://raw.github.com/alexandrems1000/TVBOXALEX/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://raw.github.com/alexandrems1000/TVBOXALEX/master/repo/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Tv Box Alex_Build</summary>
+		<description>Este Repositorio e de autoria de Alex.</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
 </addon>
 
 <addon id="tvalex.repo" name="[B][COLOR green]TV BOX [/COLOR][/B][B][COLOR yellow]ALEX [/COLOR][/B][B][COLOR red]REPOSITORIO[/COLOR][/B]" version="[B][COLOR red]0.0.6[/COLOR][/B]" provider-name="[B][COLOR blue]Alex[/COLOR][/B]">
