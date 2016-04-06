@@ -18,7 +18,7 @@ PATH = "TVBOXALEXBUILD"
 
     
 def CATEGORIES():
-    link = OPEN_URL('https://meocloud.pt/link/79eaee63-1eb9-4f8c-92e4-d712c5cc90d0/wizard.txt?download=1').replace('\n','').replace('\r','')
+    link = OPEN_URL('https://meocloud.pt/link/590480d9-3242-4a0f-b428-57ff13ca3c1f/wizard.txt/').replace('\n','').replace('\r','')
     match = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(link)
     for name,url,iconimage,fanart,description in match:
         addDir(name,url,1,iconimage,fanart,description)
