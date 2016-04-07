@@ -27,7 +27,7 @@
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Tv Box Alex BUILD</summary>
     <description lang="en">[B][COLOR green]TV BOX [/COLOR][/B][B][COLOR yellow]ALEX [/COLOR][/B] Wizard provides easy access to [COLOR red][B]TVBOX[/B] ALEX[/COLOR] Builds.</description>
-    <platform>video</platform>
+    <platform>all</platform>
   </extension>
 </addon>
 
