@@ -13,12 +13,12 @@ import ntpath
 USER_AGENT = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3'
 ADDON=xbmcaddon.Addon(id='plugin.video.tvboxalex')
 dialog = xbmcgui.Dialog()    
-VERSION = "0.0.3"
+VERSION = "0.0.4"
 PATH = "tvboxalexbuild"            
 
     
 def CATEGORIES():
-    link = OPEN_URL('https://cld.pt/dl/download/590480d9-3242-4a0f-b428-57ff13ca3c1f/wizard.txt?download=true').replace('\n','').replace('\r','')
+    link = OPEN_URL('https://cld.pt/dl/download/2262b032-6536-435f-89aa-a2abf20da7ef/wizard.txt?download=true').replace('\n','').replace('\r','')
     match = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(link)
     for name,url,iconimage,fanart,description in match:
         addDir(name,url,1,iconimage,fanart,description)
