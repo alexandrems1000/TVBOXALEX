@@ -17,7 +17,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.tvboxalex_build" name="[B][COLOR green]TV BOX [/COLOR][/B][B][COLOR yellow]ALEX [/COLOR][/B][B][COLOR blue]BUILD[/COLOR][/B]" version="[B][COLOR red]0.0.2[/COLOR][/B]" provider-name="[B][COLOR blue]Alex[/COLOR][/B]">
+<addon id="plugin.video.tvboxalexbuild" name="[B][COLOR green]TV BOX [/COLOR][/B][B][COLOR yellow]ALEX [/COLOR][/B][B][COLOR blue]BUILD[/COLOR][/B]" version="[B][COLOR red]0.0.1[/COLOR][/B]" provider-name="[B][COLOR blue]Alex[/COLOR][/B]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
