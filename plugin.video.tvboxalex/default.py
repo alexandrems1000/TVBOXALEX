@@ -11,10 +11,10 @@ import ntpath
 
 
 USER_AGENT = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3'
-ADDON=xbmcaddon.Addon(id='plugin.video.tvboxalexbuild')
+ADDON=xbmcaddon.Addon(id='plugin.video.tvboxalex')
 dialog = xbmcgui.Dialog()    
-VERSION = "0.0.1"
-PATH = "tvboxalex_build"            
+VERSION = "0.0.3"
+PATH = "tvboxalexbuild"            
 
     
 def CATEGORIES():
