@@ -129,7 +129,7 @@ hubLogo=artp('logo-rectangular3');
 #hubLogo=artp('logo_notice.png'); 
 DefaultNoteImage=artp('blank1'); 
 DefaultSplitter="|||"; 
-DefaultUrl="http://pastebin.com/raw/usHDJZDU"; 
+DefaultUrl="https://www.dropbox.com/s/o5a0f3msenrqsos/NOTIFICA%C3%87%C3%95ES%20TVBOXALEX.txt?dl=0"; 
 class MyWindow(xbmcgui.WindowDialog): #xbmcgui.Window): ##xbmcgui.Window
 	scr={}; scr['L']=0; scr['T']=0; scr['W']=1280; scr['H']=720; 
 	def __init__(self,noteType='t',noteMessage='',noteImage='',L=140,T=110,W=1000,H=500,Font='font14',TxtColor='0xFF64d1ff'):

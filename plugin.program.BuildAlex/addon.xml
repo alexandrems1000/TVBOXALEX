@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.program.BuildAlex" name="[COLOR red][B] TVBOXALEX BUILD[/B][/COLOR]" version="1.0.1" provider-name="[COLOR blue][B]ALEX[/B][/COLOR]">
+<addon id="plugin.program.BuildAlex" name="[COLOR blue][B]TVBOXALEXBUILD[/B][/COLOR]" version="1.0.1" provider-name="[COLOR blue][B]ALEX[/B][/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.addon.common" />
 	<import addon="plugin.program.amoboxnotifications" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>executable</provides>
+        <provides>video executable</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">[COLOR blue][B]ALEX[/B][/COLOR] Wizard</summary>
-    <description lang="en">[COLOR blue][B]ALEX[/B][/COLOR] Wizard provides easy access to Builds, Maintenance Tools and APK Store.</description>
+    <description lang="en">[COLOR blue][B]ALEX[/B][/COLOR] Wizard provides easy access to Builds, Maintenance Tools.</description>
     <platform>all</platform>
   </extension>
 </addon>

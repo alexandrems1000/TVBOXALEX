@@ -18,7 +18,7 @@ USER_AGENT = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/
 addon_id = 'plugin.program.BuildAlex'
 ADDON = xbmcaddon.Addon(id=addon_id)
 AddonID='plugin.program.BuildAlex'
-AddonTitle="[COLOR red][B] TVBOXALEX BUILD[/B][/COLOR]Wizard"
+AddonTitle="[COLOR red][B]TVBOXALEXBUILD[/B][/COLOR]Wizard"
 dialog       =  xbmcgui.Dialog()
 net = Net()
 HOME         =  xbmc.translatePath('special://home/')
@@ -30,7 +30,7 @@ ART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/re
 VERSION = "4.0.0"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
-PATH = "TVBOXALEX BUILD"            
+PATH = "TVBOXALEXBUILD"            
 BASEURL = "http://amobox.comlu.com"
 H = 'http://'
 skin         =  xbmc.getSkinDir()
@@ -76,7 +76,7 @@ mastercopy   =  ADDON.getSetting('mastercopy')
 
 #Root menu of addon
 def INDEX():
-	addDir('[COLOR red][B] TVBOXALEX BUILD[/B][/COLOR][COLOR white] Builds[/COLOR]',BASEURL,20,ART+'amoboxwiz.png',FANART,'')
+	addDir('[COLOR blue][B] TVBOXALEX BUILD[/B][/COLOR][COLOR white] Builds[/COLOR]',BASEURL,20,ART+'amoboxwiz.png',FANART,'')
 	#addDir('[COLOR lime][B]APK[/B] STORE[/COLOR]',BASEURL,40,ART+'apkstore.png',FANART,'')
 	addDir('[COLOR yellow]MAINTENANCE[/COLOR]',BASEURL,30,ART+'maintenance.png',FANART,'')
 	
