@@ -4,7 +4,7 @@
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>executable</provides>
+        <provides>video executable</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Tv Box Alex BUILD</summary>

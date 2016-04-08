@@ -14,7 +14,7 @@ USER_AGENT = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/
 ADDON=xbmcaddon.Addon(id='plugin.video.tvboxalex')
 dialog = xbmcgui.Dialog()    
 VERSION = "0.0.4"
-PATH = "tvboxalexbuild"            
+PATH = "tvboxalex"            
 
     
 def CATEGORIES():
@@ -142,7 +142,7 @@ def platform():
 def addDir(name,url,mode,iconimage,fanart,description):
         u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)+"&iconimage="+urllib.quote_plus(iconimage)+"&fanart="+urllib.quote_plus(fanart)+"&description="+urllib.quote_plus(description)
         ok=True
-        liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
+        liz=xbmcgui.ListItem(name, iconImage="icon.png", thumbnailImage=iconimage)
         liz.setInfo( type="Video", infoLabels={ "Title": name, "Plot": description } )
         liz.setProperty( "Fanart_Image", fanart )
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
