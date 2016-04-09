@@ -1,44 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.program.amoboxnotifications" version="4.0.0"
-       name="TVBOXALEX Notifications" provider-name="TVBOXALEX">
-  <requires>
-  	<import addon="xbmc.python" version="2.1.0"/>
-  	<import addon="script.module.addon.common" optional="true" />
-  </requires>
-  <extension point="xbmc.python.script" library="default.py">
-    <provides>video executable</provides>
-  </extension>
-  <extension point="xbmc.service" library="service.py" start="startup">
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  	<summary>TVBOXALEX</summary>
-  	<description>Recebe as mais recentes novidades da TVBOXALEX mal abres o Kodi. Cancelar subscrição nas definições do Addon.</description>
-  	<disclaimer>Nós não assumimos qualquer responsabilidade por eventuais problemas este plugin possa causar.</disclaimer>
-  	<language>en</language>
-  	<platform>all</platform>
-  	<website>http://</website>
-  	<source>http://</source>
-  	<email>tvboxalex@hotmail.com</email>
-  </extension>
-</addon>
-
-<addon id="plugin.program.BuildAlex" name="[COLOR blue][B]TVBOXALEXBUILD[/B][/COLOR]" version="1.0.1" provider-name="[COLOR blue][B]ALEX[/B][/COLOR]">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.addon.common" />
-	<import addon="plugin.program.amoboxnotifications" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video executable</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">[COLOR blue][B]ALEX[/B][/COLOR] Wizard</summary>
-    <description lang="en">[COLOR blue][B]ALEX[/B][/COLOR] Wizard provides easy access to Builds, Maintenance Tools.</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
 <addon id="plugin.video.tvalex" name="[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][COLOR white]MASTER[/COLOR]" version="0.3.3" provider-name="[B][COLOR blue]ALEX[/COLOR][/B]">
 	<requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -52,20 +13,6 @@
     <platform>all</platform>
     <summary lang="en">assista tv ao vivo com a TV_BOX_ALEX</summary>
     <description lang="en">O autor deste addon nao e responsavel pelo conteudo dos streams. Addon exclusivo para os clientes TvBoxAlex.</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.tvboxalex" name="[B][COLOR green]TV BOX [/COLOR][/B][B][COLOR yellow]ALEX [/COLOR][/B][B][COLOR blue]BUILD[/COLOR][/B]" version="[B][COLOR red]0.0.4[/COLOR][/B]" provider-name="[B][COLOR blue]Alex[/COLOR][/B]">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video executable</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Tv Box Alex BUILD</summary>
-    <description lang="en">[B][COLOR green]TV BOX [/COLOR][/B][B][COLOR yellow]ALEX [/COLOR][/B] Wizard provides easy access to [COLOR red][B]TVBOX[/B] ALEX[/COLOR] Builds.</description>
     <platform>all</platform>
   </extension>
 </addon>
