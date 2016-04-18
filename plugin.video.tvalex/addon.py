@@ -22,7 +22,7 @@ import urllib,urllib2,re,xbmcplugin,xbmcgui,xbmc,xbmcaddon,HTMLParser,base64,xml
 from BeautifulSoup import BeautifulStoneSoup, BeautifulSoup, BeautifulSOAP
 h = HTMLParser.HTMLParser()
 
-ultimaversao = '0.3.2'
+ultimaversao = '0.3.4'
 addon_id = 'plugin.video.tvalex'
 selfAddon = xbmcaddon.Addon(id=addon_id)
 addonfolder = selfAddon.getAddonInfo('path')
