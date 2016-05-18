@@ -22,7 +22,7 @@ import urllib,urllib2,re,xbmcplugin,xbmcgui,xbmc,xbmcaddon,HTMLParser,base64,xml
 from BeautifulSoup import BeautifulStoneSoup, BeautifulSoup, BeautifulSOAP
 h = HTMLParser.HTMLParser()
 
-ultimaversao = '0.3.4'
+ultimaversao = '0.3.6'
 addon_id = 'plugin.video.tvalex'
 selfAddon = xbmcaddon.Addon(id=addon_id)
 addonfolder = selfAddon.getAddonInfo('path')
@@ -43,7 +43,7 @@ def menus():
 	addDir('[B]CANAIS DO BRASIL[/B]','-',9,artfolder + 'CANAISBRASIL.png')
 	addDir('[B]C. TEMPORARIOS[/B]','https://dl.dropbox.com/s/rsedumwxfcprs55/CANAISTEMP.txt?dl=0',4,artfolder + 'TEMPORARIOS.png')
 	addDir('[B]UK TV[/B]','https://dl.dropbox.com/s/wxloawcl620fo8s/UKTV.txt?dl=0',4,artfolder + 'CANAISUK.png')
-	addDir('[B]CANAIS INFANTIS[/B]','https://dl.dropbox.com/s/0bd938oa06gujs3/Infantil.txt?dl=0',4,artfolder + 'CANAISINFANTIS.png')
+	addDir('[B]CANAIS INFANTIS[/B]','https://dl.dropbox.com/s/u4d5b3hbo2cd8va/Infantil.txt?dl=0',4,artfolder + 'CANAISINFANTIS.png')
 	addDir('[B]DESPORTO MUNDO[/B]','https://dl.dropbox.com/s/iuxhcbk1t5a2yzw/DesportoMundo.txt?dl=0',8,artfolder + 'ESPORTESINTERN.png')
 	addDir('[B]MUSICA[/B]','https://dl.dropbox.com/s/vhm1wqlbmw4rt6t/MusicaMUNDO.txt?dl=0',4,artfolder + 'MUSICAMUNDO.png')	
 	#versao_disponivel()
